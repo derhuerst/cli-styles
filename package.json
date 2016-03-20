@@ -1,0 +1,21 @@
+{
+	"name":           "cli-styles",
+	"description":    "A consistent look & feel for CLI prompts.",
+	"version":        "0.1.0",
+	"main":           "index.js",
+	"files":          ["index.js"],
+	"keywords":       ["cli", "terminal", "prompt", "style", "consistent"],
+	"author":         "Jannis R <mail@jannisr.de>",
+	"homepage":       "https://github.com/derhuerst/cli-styles",
+	"repository":     "git://github.com/derhuerst/cli-styles.git",
+	"license":        "ISC",
+	"engines":        {"node": ">=4"},
+	"dependencies": {
+		"chalk":      "^1.1.1",
+		"figures":    "^1.4"
+	},
+	"scripts": {
+		"test":       "node -e \"require('./index')\"",
+		"prepublish": "npm test"
+	}
+}
