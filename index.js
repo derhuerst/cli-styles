@@ -23,7 +23,7 @@ const symbol = (done, aborted) =>
 	aborted ? symbols.aborted : (done ? symbols.done : symbols.default)
 
 // Between the question and the user's input.
-const delimiter = chalk.gray('>')
+const delimiter = chalk.gray(figures.pointerSmall)
 
 
 
