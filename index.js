@@ -27,10 +27,36 @@ const delimiter = chalk.gray('>')
 
 
 
+// Determine the type of a keypress event.
+const keypress = function (raw, key) {
+	if (!key) key = {
+		name:     raw.toLowerCase(),
+		sequence: raw,
+		ctrl: false, meta: false, shift: false
+	}
+
+	if (key.ctrl) {
+		if (key.name === 'a')     return 'first'
+		if (key.name === 'c')     return 'abort'
+		if (key.name === 'd')     return 'abort'
+		if (key.name === 'e')     return 'last'
+	}
+	if (key.name === 'return')    return 'submit'
+	if (key.name === 'backspace') return 'delete'
+	if (key.name === 'abort')     return 'abort'
+	if (key.name === 'up')        return 'up'
+	if (key.name === 'down')      return 'down'
+
+	return key.sequence
+}
+
+
+
 module.exports = Object.freeze({
 	styles,
 	render,
 	symbols,
 	symbol,
-	delimiter
+	delimiter,
+	keypress
 })
