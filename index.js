@@ -34,6 +34,7 @@ const keypress = function (raw, key) {
 		sequence: raw,
 		ctrl: false, meta: false, shift: false
 	}
+	let code; if (raw) code = raw.charCodeAt(0)
 
 	if (key.ctrl) {
 		if (key.name === 'a')     return 'first'
@@ -44,8 +45,14 @@ const keypress = function (raw, key) {
 	if (key.name === 'return')    return 'submit'
 	if (key.name === 'backspace') return 'delete'
 	if (key.name === 'abort')     return 'abort'
+	if (key.name === 'escape')    return 'abort'
+
 	if (key.name === 'up')        return 'up'
 	if (key.name === 'down')      return 'down'
+	if (key.name === 'right')     return 'right'
+	if (key.name === 'left')      return 'left'
+	if (code === 8747)            return 'left'  // alt + B
+	if (code === 402)             return 'right' // alt + F
 
 	return key.sequence
 }
