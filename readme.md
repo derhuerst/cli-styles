@@ -1,6 +1,13 @@
 # cli-styles
 
-This project aims to bring a **consistent look & feel to CLI apps**. It provides basic elements like a prompt delimiter for modules to use. *It does not render by itself.*
+This project aims to bring a **consistent look & feel to CLI apps**. It provides:
+
+- styles of showing user input (`default`, `password`, `invisible`),
+- indicators the status of a prompt (`?`, `✔`, `✖`),
+- a prompt delimiter (`›`),
+- support dealing with keypress events (control keys, backspace, etc)
+
+**This project *is not* a prompt or a command line executable, it intends to standardize interfaces of CLI tools.**
 
 [![npm version](https://img.shields.io/npm/v/cli-styles.svg)](https://www.npmjs.com/package/cli-styles)
 [![build status](https://img.shields.io/travis/derhuerst/cli-styles.svg)](https://travis-ci.org/derhuerst/cli-styles)
