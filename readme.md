@@ -4,8 +4,7 @@ This project aims to bring a **consistent look & feel to CLI apps**. It provides
 
 - styles of showing user input (`default`, `password`, `invisible`),
 - indicators the status of a prompt (`?`, `✔`, `✖`),
-- a prompt delimiter (`›`),
-- support dealing with keypress events (control keys, backspace, etc)
+- a prompt delimiter (`›`)
 
 **This project *is not* a prompt or a command line executable, it intends to standardize interfaces of CLI tools.**
 
