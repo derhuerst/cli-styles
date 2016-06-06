@@ -18,6 +18,7 @@ This project aims to bring a **consistent look to CLI apps**. It provides:
 
 - [number-prompt](https://github.com/derhuerst/number-prompt)
 - [date-prompt](https://github.com/derhuerst/date-prompt)
+- [select-prompt](https://github.com/derhuerst/select-prompt)
 - [multiselect-prompt](https://github.com/derhuerst/multiselect-prompt)
 - [cli-autocomplete](https://github.com/derhuerst/cli-autocomplete)
 
