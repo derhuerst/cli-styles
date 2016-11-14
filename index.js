@@ -26,6 +26,9 @@ const symbol = (done, aborted) =>
 const delimiter = (completing) =>
 	chalk.gray(completing ? figures.ellipsis : figures.pointerSmall)
 
+const item = (expandable, expanded) =>
+	chalk.gray(expandable ? (expanded ? figures.pointerSmall : '+') : figures.line)
+
 
 
 module.exports = Object.freeze({
@@ -33,5 +36,6 @@ module.exports = Object.freeze({
 	render,
 	symbols,
 	symbol,
-	delimiter
+	delimiter,
+	item
 })
