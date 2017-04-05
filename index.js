@@ -2,6 +2,9 @@
 
 const chalk =   require('chalk')
 const figures = require('figures')
+const window = require('window-size')
+const ansi = require('ansi-escapes')
+const width = require('string-width')
 
 
 
@@ -29,6 +32,14 @@ const delimiter = (completing) =>
 const item = (expandable, expanded) =>
 	chalk.gray(expandable ? (expanded ? figures.pointerSmall : '+') : figures.line)
 
+// Generate ANSI chars to clear the whole prompt.
+const clear = (prompt, perLine = window.width) => {
+	if (!perLine) return ansi.eraseLine + ansi.cursorTo(0)
+
+	const lines = Math.floor(width(prompt) / perLine)
+	return ansi.eraseLine + ansi.eraseLines(lines) + ansi.cursorTo(0)
+}
+
 
 
 module.exports = Object.freeze({
@@ -37,5 +48,6 @@ module.exports = Object.freeze({
 	symbols,
 	symbol,
 	delimiter,
-	item
+	item,
+	clear
 })
