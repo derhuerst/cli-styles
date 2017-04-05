@@ -9,7 +9,7 @@
 	"homepage":       "https://github.com/derhuerst/cli-styles",
 	"repository":     "git://github.com/derhuerst/cli-styles.git",
 	"license":        "ISC",
-	"engines":        {"node": ">=4"},
+	"engines":        {"node": ">=6"},
 	"dependencies": {
 		"chalk":      "^1.1.3",
 		"figures":    "^2",
