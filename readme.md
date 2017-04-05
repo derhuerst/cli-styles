@@ -12,17 +12,21 @@ This project aims to bring a **consistent look to CLI apps**. It provides:
 [![build status](https://img.shields.io/travis/derhuerst/cli-styles.svg)](https://travis-ci.org/derhuerst/cli-styles)
 [![dependency status](https://img.shields.io/david/derhuerst/cli-styles.svg)](https://david-dm.org/derhuerst/cli-styles#info=dependencies)
 ![ISC-licensed](https://img.shields.io/github/license/derhuerst/cli-styles.svg)
+[![chat on gitter](https://badges.gitter.im/derhuerst.svg)](https://gitter.im/derhuerst)
 
 
 ## Prompts using *cli-styles*
 
-- [number-prompt](https://github.com/derhuerst/number-prompt)
-- [date-prompt](https://github.com/derhuerst/date-prompt)
-- [select-prompt](https://github.com/derhuerst/select-prompt)
-- [tree-select-prompt](https://github.com/derhuerst/tree-select-prompt)
-- [multiselect-prompt](https://github.com/derhuerst/multiselect-prompt)
-- [cli-autocomplete](https://github.com/derhuerst/cli-autocomplete)
-- [mail-prompt](https://github.com/derhuerst/mail-prompt)
+- [`date-prompt`](https://github.com/derhuerst/date-prompt)
+- [`mail-prompt`](https://github.com/derhuerst/mail-prompt)
+- [`multiselect-prompt`](https://github.com/derhuerst/multiselect-prompt)
+- [`number-prompt`](https://github.com/derhuerst/number-prompt)
+- [`range-prompt`](https://github.com/derhuerst/range-prompt)
+- [`select-prompt`](https://github.com/derhuerst/select-prompt)
+- [`text-prompt`](https://github.com/derhuerst/text-prompt)
+- [`tree-select-prompt`](https://github.com/derhuerst/tree-select-prompt)
+- [`cli-autocomplete`](https://github.com/derhuerst/cli-autocomplete)
+- [`switch-prompt`](https://github.com/derhuerst/switch-prompt)
 
 
 ## Installing
