@@ -4,6 +4,7 @@ const chalk =   require('chalk')
 const figures = require('figures')
 const window = require('window-size')
 const ansi = require('ansi-escapes')
+const split = require('split-lines')
 const width = require('string-width')
 
 
@@ -36,8 +37,12 @@ const item = (expandable, expanded) =>
 const clear = (prompt, perLine = window.width) => {
 	if (!perLine) return ansi.eraseLine + ansi.cursorTo(0)
 
-	const lines = Math.floor(width(prompt) / perLine)
-	return ansi.eraseLine + ansi.eraseLines(lines) + ansi.cursorTo(0)
+	let rows = 0
+	for (let line of split(prompt)) {
+		rows += 1 + Math.floor(width(line) / perLine)
+	}
+
+	return (ansi.eraseLine + ansi.cursorPrevLine).repeat(rows)
 }
 
 
