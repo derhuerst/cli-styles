@@ -38,11 +38,13 @@ const clear = (prompt, perLine = window.width) => {
 	if (!perLine) return ansi.eraseLine + ansi.cursorTo(0)
 
 	let rows = 0
-	for (let line of split(prompt)) {
-		rows += 1 + Math.floor(width(line) / perLine)
+	const lines = split(prompt)
+	for (let line of lines) {
+		rows += 1 + Math.floor(Math.max(width(line) - 1, 0) / perLine)
 	}
 
-	return (ansi.eraseLine + ansi.cursorPrevLine).repeat(rows)
+	return (ansi.eraseLine + ansi.cursorPrevLine).repeat(rows - 1)
+		+ ansi.eraseLine + ansi.cursorTo(0)
 }
 
 
