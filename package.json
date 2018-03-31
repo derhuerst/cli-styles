@@ -1,7 +1,7 @@
 {
 	"name": "cli-styles",
 	"description": "A consistent look for CLI prompts.",
-	"version": "0.6.2",
+	"version": "1.0.0",
 	"main": "index.js",
 	"files": [
 		"index.js"
