@@ -3,9 +3,6 @@
 const chalk =   require('chalk')
 const figures = require('figures')
 const window = require('window-size')
-const ansi = require('ansi-escapes')
-const split = require('split-lines')
-const width = require('string-width')
 
 // For showing the user's input.
 const styles = Object.freeze({
@@ -31,26 +28,11 @@ const delimiter = (completing) =>
 const item = (expandable, expanded) =>
 	chalk.gray(expandable ? (expanded ? figures.pointerSmall : '+') : figures.line)
 
-// Generate ANSI chars to clear the whole prompt.
-const clear = (prompt, perLine = window.width) => {
-	if (!perLine) return ansi.eraseLine + ansi.cursorTo(0)
-
-	let rows = 0
-	const lines = split(prompt)
-	for (let line of lines) {
-		rows += 1 + Math.floor(Math.max(width(line) - 1, 0) / perLine)
-	}
-
-	return (ansi.eraseLine + ansi.cursorPrevLine).repeat(rows - 1)
-		+ ansi.eraseLine + ansi.cursorTo(0)
-}
-
 module.exports = Object.freeze({
 	styles,
 	render,
 	symbols,
 	symbol,
 	delimiter,
-	item,
-	clear
+	item
 })
