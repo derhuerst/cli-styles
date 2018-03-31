@@ -1,26 +1,36 @@
 {
-	"name":           "cli-styles",
-	"description":    "A consistent look for CLI prompts.",
-	"version":        "0.6.2",
-	"main":           "index.js",
-	"files":          ["index.js"],
-	"keywords":       ["cli", "terminal", "prompt", "style", "consistent"],
-	"author":         "Jannis R <mail@jannisr.de>",
-	"homepage":       "https://github.com/derhuerst/cli-styles",
-	"repository":     "git://github.com/derhuerst/cli-styles.git",
-	"license":        "ISC",
-	"engines":        {"node": ">=6"},
+	"name": "cli-styles",
+	"description": "A consistent look for CLI prompts.",
+	"version": "0.6.2",
+	"main": "index.js",
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"cli",
+		"terminal",
+		"prompt",
+		"style",
+		"consistent"
+	],
+	"author": "Jannis R <mail@jannisr.de>",
+	"homepage": "https://github.com/derhuerst/cli-styles",
+	"repository": "git://github.com/derhuerst/cli-styles.git",
+	"license": "ISC",
+	"engines": {
+		"node": ">=6"
+	},
 	"dependencies": {
+		"ansi-escapes": "^3.1.0",
 		"chalk": "^2.3.2",
 		"figures": "^2",
 		"line-count": "^0.1.0",
-		"window-size": "^1.1.0",
-		"ansi-escapes": "^3.1.0",
 		"split-lines": "^1.1.0",
-		"string-width": "^2.1.1"
+		"string-width": "^2.1.1",
+		"window-size": "^1.1.0"
 	},
 	"scripts": {
-		"test":       "node -e \"require('./index')\"",
+		"test": "node -e \"require('./index')\"",
 		"prepublish": "npm test"
 	}
 }

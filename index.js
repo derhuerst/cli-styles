@@ -7,8 +7,6 @@ const ansi = require('ansi-escapes')
 const split = require('split-lines')
 const width = require('string-width')
 
-
-
 // For showing the user's input.
 const styles = Object.freeze({
 	password:  (input) => '*'.repeat(input.length),
@@ -46,8 +44,6 @@ const clear = (prompt, perLine = window.width) => {
 	return (ansi.eraseLine + ansi.cursorPrevLine).repeat(rows - 1)
 		+ ansi.eraseLine + ansi.cursorTo(0)
 }
-
-
 
 module.exports = Object.freeze({
 	styles,

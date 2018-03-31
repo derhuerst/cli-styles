@@ -8,11 +8,14 @@ This project aims to bring a **consistent look to CLI apps**. It provides:
 
 ***Note*: This project *is not* a prompt or a command line executable, it intends to standardize interfaces of CLI tools.**
 
+`cli-styles` works well with [`prompt-skeleton`](https://github.com/derhuerst/prompt-skeleton).
+
 [![npm version](https://img.shields.io/npm/v/cli-styles.svg)](https://www.npmjs.com/package/cli-styles)
 [![build status](https://img.shields.io/travis/derhuerst/cli-styles.svg)](https://travis-ci.org/derhuerst/cli-styles)
 [![dependency status](https://img.shields.io/david/derhuerst/cli-styles.svg)](https://david-dm.org/derhuerst/cli-styles#info=dependencies)
 ![ISC-licensed](https://img.shields.io/github/license/derhuerst/cli-styles.svg)
 [![chat on gitter](https://badges.gitter.im/derhuerst.svg)](https://gitter.im/derhuerst)
+[![support me on Patreon](https://img.shields.io/badge/support%20me-on%20patreon-fa7664.svg)](https://patreon.com/derhuerst)
 
 
 ## Prompts using *cli-styles*
